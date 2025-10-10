@@ -1,0 +1,13 @@
+node_modules
+.git
+.gitignore
+README.md
+design.md
+interaction.md
+outline.md
+*.log
+.DS_Store
+.vscode
+.idea
+*.tmp
+*.temp
