@@ -2,7 +2,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^3.4.0"
   },
   "name": "techelitesite",
   "version": "1.0.0",
@@ -24,7 +24,8 @@
     "update-browserslist-db": "^1.1.3"
   },
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:prod": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "repository": {
     "type": "git",
