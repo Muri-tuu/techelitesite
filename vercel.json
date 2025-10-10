@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build:prod",
+  "buildCommand": "npm ci && npm run build:prod",
   "outputDirectory": ".",
   "installCommand": "npm install",
   "framework": null,
@@ -12,18 +12,22 @@
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/dist/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     }
-  ],
-  "functions": {
-    "src/main.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }
